@@ -1,12 +1,9 @@
 package com.nhpatt.ptd.doubles.stories;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.mockito.Mockito.mock;
 
 import org.junit.Test;
-
-import com.nhpatt.ptd.doubles.stories.EstimateType;
-import com.nhpatt.ptd.doubles.stories.User;
-import com.nhpatt.ptd.doubles.stories.UserStory;
 
 public class UserTests {
 
@@ -14,6 +11,14 @@ public class UserTests {
 	public void aNewUserCanWork() {
 		User user = new User();
 		user.addUserStory(createADummyUserStory());
+		assertEquals(1, user.getStoriesInProgress().size());
+	}
+	
+	@Test
+	public void aNewUserCanWorkWithADummyStory() {
+		User user = new User();
+		UserStory dummy = mock(UserStory.class);
+		user.addUserStory(dummy);
 		assertEquals(1, user.getStoriesInProgress().size());
 	}
 
