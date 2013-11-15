@@ -8,6 +8,7 @@ import com.nhpatt.ptd.doubles.stories.stub.Proyect;
 public class User {
 
 	private List<UserStory> storiesInProgress = new ArrayList<UserStory>();
+	private int failedProyects;
 
 	public void addUserStory(UserStory story) {
 		if (iAmFree()) {
@@ -25,7 +26,12 @@ public class User {
 	}
 
 	public void closePendingTasks(Proyect proyect) {
-		// DO some interesting things here
+		failedProyects++;
+		//Other things
+	}
+
+	public int getFailedProyects() {
+		return failedProyects;
 	}
 
 }
