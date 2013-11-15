@@ -2,6 +2,8 @@ package com.nhpatt.ptd.doubles.stories.stub;
 
 import java.security.AccessControlException;
 
+import com.nhpatt.ptd.doubles.stories.User;
+
 public class Proyect {
 
 	private static final Integer ID = 1;
@@ -22,6 +24,13 @@ public class Proyect {
 			return Priorities.ASAP;
 		}
 		return Priorities.NOW;
+	}
+
+	public void close(Database database) {
+		User[] users = database.getUsers(this);
+		for (User user : users) {
+			user.closePendingTasks(this);
+		}
 	}
 
 }

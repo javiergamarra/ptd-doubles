@@ -3,6 +3,8 @@ package com.nhpatt.ptd.doubles.stories;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.nhpatt.ptd.doubles.stories.stub.Proyect;
+
 public class User {
 
 	private List<UserStory> storiesInProgress = new ArrayList<UserStory>();
@@ -20,6 +22,10 @@ public class User {
 
 	public List<UserStory> getStoriesInProgress() {
 		return storiesInProgress;
+	}
+
+	public void closePendingTasks(Proyect proyect) {
+		// DO some interesting things here
 	}
 
 }
