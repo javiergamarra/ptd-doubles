@@ -1,6 +1,7 @@
 package com.nhpatt.ptd.doubles.stories.stub;
 
 import com.nhpatt.ptd.doubles.stories.User;
+import com.nhpatt.ptd.doubles.stories.UserStory;
 
 
 public class Database {
@@ -26,6 +27,11 @@ public class Database {
 	}
 
 	public void loadNewData() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void save(UserStory userStory) {
 		// TODO Auto-generated method stub
 		
 	}
