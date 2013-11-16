@@ -7,6 +7,8 @@ import com.nhpatt.ptd.doubles.stories.User;
 public class Proyect {
 
 	private static final Integer ID = 1;
+	
+	private User[] users;
 
 	public Priorities getMostImportantUserStory(Database database) {
 		try {
@@ -31,6 +33,10 @@ public class Proyect {
 		for (User user : users) {
 			user.closePendingTasks(this);
 		}
+	}
+	
+	public void setUsers(User[] users) {
+		this.users = users;
 	}
 
 }

@@ -15,4 +15,19 @@ public class Database {
 		return null;
 	}
 
+	public void loadTestDatabase(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void cleanDatabase() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void loadNewData() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
